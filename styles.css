@@ -199,6 +199,7 @@ select{
     text-align: center;
     font-size: 1vw;
     color: var(--color);
+    line-height: 1.1;
 }
 
 .slide{
@@ -253,7 +254,6 @@ input{
     border-radius: 20px;
     position: relative;
     border: .75px dotted var(--color);
-    transform: scale(1.11);
 }
 
 
@@ -648,7 +648,6 @@ height: 36%;
 
     .container{
         margin-left:13vw;
-        transform: scale(.92);
     }
 
     #save{
