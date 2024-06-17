@@ -647,9 +647,9 @@ height: 36%;
         margin-left: 1vw;
     }
 
-    .container{
+    .div-container{
         margin-left:15vw;
-        transform: scale(.9);
+        transform: scale(.85);
 
     }
 
