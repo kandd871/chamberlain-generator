@@ -189,10 +189,11 @@ select{
     background-color: #003d6f;
     width:20%;
     display: block;
-    border: 1px solid var(--color);
+    border: 1px dashed #5C4033;;
     height: 90vh;
     padding: 2%;
     position: absolute;
+    /* box-sizing: border-box; */
     margin-left: 3vw;
     border-radius: 2vh;
     text-align: center;
@@ -252,6 +253,7 @@ input{
     border-radius: 20px;
     position: relative;
     border: .75px dotted var(--color);
+    transform: scale(1.11);
 }
 
 
@@ -631,5 +633,25 @@ height: 36%;
         max-width: 100%;
         height: auto; /* Maintain the aspect ratio */
     }
+}
+
+@media only screen and (max-height: 850px){
+    #box{
+        transform: scale(.96);
+    }
     
+    #options{
+        line-height: .9;
+        padding: 1.5%;
+        margin-left: 1vw;
+    }
+
+    .container{
+        margin-left:13vw;
+        transform: scale(.92);
+    }
+
+    #save{
+        margin-top: -1vh;
+    }
 }
