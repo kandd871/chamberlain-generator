@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.js"></script>
+<!-- <script src="html2canvas.min.js"></script> -->
+<title>chamberlain coffee generator!</title>
+</head>
+<body>
+<div id="box">
+<div id="options">
+    <input type="text" id="name" name="name" required minlength="4" maxlength="50" size="30" placeholder="your coffee name..."/><br><br>
+    <label for="bean">bean type</label><br>
+    <select id="bean">
+        <option value="whole">whole bean</option>
+        <option value="ground">ground bean</option>
+    </select>
+    <br><br><br>
+    <label for="roast">roast</label>
+    <input type="range" min="1" max="3" value="1" class="slider" id="roast"> 
+    <div class="slide">
+    <span class="labels">light</span>
+    <span class="labels">dark</span>
+    </div>
+<br>
+
+    <label for="caffeine">caffeine</label><br>
+    <input type="range" min="0" max="5" value="0" class="slider" id="caffeine">
+    <div class="slide">
+    <span class="labels">0</span>
+    <span class="labels">5</span>
+    </div>
+    <br>
+        
+
+    <label for="taste">flavor</label>
+    <input type="range" min="1" max="5" value="1" class="slider" id="taste"><br>
+    <div class="slide">
+        <span class="labels">sweet</span>
+        <span class="labels">bitter</span>
+    </div>
+        
+    <div class="flavors">
+    <!-- <span>flavors</span><Br> -->
+
+        <label for="chocolate" class="custom-checkbox">chocolate
+            <input type="checkbox" class="checkbox" id="chocolate">
+            <span class="checkmark"></span>
+          </label>
+          <br>
+
+          <label for="caramel" class="custom-checkbox">caramel
+            <input type="checkbox" class="checkbox" id="caramel">
+            <span class="checkmark"></span>
+          </label>
+          <br>
+          
+
+          <label for="nuts" class="custom-checkbox">nuts
+            <input type="checkbox" class="checkbox" id="nuts">
+            <span class="checkmark"></span>
+          </label>
+          <br>
+
+          <label for="fruits" class="custom-checkbox">fruits
+            <input type="checkbox" class="checkbox" id="fruits">
+            <span class="checkmark"></span>
+          </label>
+          <br>
+
+          <label for="vanilla" class="custom-checkbox">vanilla
+            <input type="checkbox" class="checkbox" id="vanilla">
+            <span class="checkmark"></span>
+          </label>
+          <br>
+
+          <label for="honey" class="custom-checkbox">honey
+            <input type="checkbox" class="checkbox" id="honey">
+            <span class="checkmark"></span>
+          </label>
+          <br>
+
+          <label for="spice" class="custom-checkbox">spice
+            <input type="checkbox" class="checkbox" id="spice">
+            <span class="checkmark"></span>
+          </label>
+          <br>
+    </div>
+    <br><br>
+    
+    <label for="timeOfDay">time of day</label><Br>
+    <select id="timeOfDay">
+        <option value="morning">morning</option>
+        <option value="midday">midday</option>
+        <option value="evening">evening</option>
+        <option value="night">night</option>
+    </select><br><Br>
+    <input type="text" id="note" name="note" required minlength="4" maxlength="100" size="30" placeholder="tasting notes..."/>
+    <br><br>
+
+    <button id="save">save your label!</button>
+
+</div>
+<div class = "container">
+
+</div>
+</div>
+<div class="response">
+    <div id="img"><img src="emma.png"></div>
+    <div id="pls">view on your laptop to make a blend!</div>
+</div>
+<script src="main2.js"></script>
+</body>
+</html>

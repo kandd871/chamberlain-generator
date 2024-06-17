@@ -1,0 +1,635 @@
+@font-face {
+    font-family: "Tropiline";
+    src: url("Tropiline.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  /* @font-face {
+    font-family: "Tropiline";
+    src: url("Tropiline Bold.otf") format("opentype");
+    font-weight: bold;
+    font-style: normal;
+  } */
+
+  :root {
+    --color: beige;
+    --background: #003d6f;
+  }
+
+*{
+    transition: .25s;
+}
+  body {
+    width: 100vw;
+    margin: 0;
+    background-color: var(--color);
+    font-family: 'Tropiline', serif;
+    font-weight: normal;
+    text-transform: lowercase;
+    line-height: 1.1;
+    color: var(--color);
+}
+
+
+  input[type="range"] {
+    /* removing default appearance */
+    -webkit-appearance: none;
+    appearance: none; 
+    /* creating a custom design */
+    width: 90%;
+    cursor: pointer;
+    outline: none;
+    /*  slider progress trick  */
+    /* overflow: hidden; */
+    border-radius: 16px;
+    margin-top: 6%;
+  }
+  
+/* Track: webkit browsers */
+input[type="range"]::-webkit-slider-runnable-track {
+    height: 7px;
+    border-radius: 16px;
+    /* background-color: var(--background); */
+    border: .5px solid var(--color);
+    box-sizing: border-box;
+  }
+  
+  /* Thumb: webkit browsers */
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 18px; /* Increase the height */
+    width: 18px; /* Increase the width */
+    border-radius: 50%;
+    background-color: var(--color);
+    margin-top: -5.5px; /* Adjust to center the thumb on the track */
+  }
+  
+  /* For the overall appearance */
+  input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    background: transparent; /* Remove default background */
+  }
+
+  input[type="text"]{
+    font-family: "Tropiline", serif;text-align: center;
+    background: transparent;
+    border: .5px solid var(--color);
+    border-radius: 10px;
+    color: var(--color);
+  }
+  input[type="text"]:not(:placeholder-shown) {
+    background: beige;
+    color: var(--background);
+  }
+
+  /* Hide the default checkbox */
+.custom-checkbox input[type="checkbox"] {
+    display: none;
+  }
+  
+  /* Style the custom checkbox container */
+  .custom-checkbox {
+    display: inline-block;
+    position: relative;
+    padding-left: 30px; /* Adjust the padding to make space for the custom checkbox */
+    cursor: pointer;
+    font-size: 1.1vw;
+    user-select: none; /* Prevent text selection on double click */
+    margin-bottom: -.25vw;
+  }
+  
+  /* Style the checkmark (custom checkbox) */
+  .custom-checkbox .checkmark {
+    position: absolute;
+    /* top: 20%; */
+    left: 0;
+    height: 14px;
+    width: 14px;
+    background-color: transparent; /* Make the initial state transparent */
+    border: 1.5px solid var(--color); /* Add a border to the checkbox */
+    border-radius: 10px; /* Optional: rounded corners */
+  }
+  
+  /* Create the checkmark when the checkbox is checked */
+  .custom-checkbox input[type="checkbox"]:checked + .checkmark {
+    background-color: var(--color);
+    border: 1.5px solid var(--color);
+  }
+  
+  /* Style the checkmark inside the custom checkbox when checked */
+  .custom-checkbox input[type="checkbox"]:checked + .checkmark:after {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 2.5px;
+    top: 0px;
+    width: 6px;
+    height: 9px;
+    border: solid var(--background);
+    border-width: 0 4px 4px 0;
+    transform: rotate(45deg);
+  }
+  
+  /* Optional: Style for the checkmark when hovered */
+  .custom-checkbox:hover input[type="checkbox"] + .checkmark {
+  }
+  
+#save{
+    background-color: var(--color);
+    border: .5px solid var(--color);
+    padding: 3%;
+    font-size: 1.1vw;
+    border-radius: 10px;
+    font-family: "Tropiline", serif;
+    color: var(--background);
+    cursor: pointer;
+}
+
+#save:hover{
+    transform: rotate(5deg);
+}
+
+select{
+    font-family: "Tropiline", serif;
+    margin-top: 4%;
+    padding: 2%;
+    font-size: 1vw;
+    background: var(--color);
+    color:var(--background);
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .flavors label{
+    border: none;
+    font-size: 1vw;
+  }
+
+  .flavors{
+    justify-content: center;
+    width: 50%;
+    display: block;
+    text-align: left;
+    margin-left: 35%;
+  }
+
+#box{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+}
+
+
+#options{
+    background-color: #003d6f;
+    width:20%;
+    display: block;
+    border: 1px solid var(--color);
+    height: 90vh;
+    padding: 2%;
+    position: absolute;
+    margin-left: 3vw;
+    border-radius: 2vh;
+    text-align: center;
+    font-size: 1vw;
+    color: var(--color);
+}
+
+.slide{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-size: .75vw;
+    margin-top: -1%;
+}
+
+#note{
+    margin-top: 2%;
+    height: 2.5vw;
+}
+
+#timeOfDay, #bean{
+    margin-top: 5%;;
+}
+
+label{
+    border: 1px solid var(--color);
+    padding: 4% 3.5% 3% 3.5%;
+    color:var(--color);
+    border-radius: 50%;
+    /* width: 100%; */
+}
+
+input{
+    margin-bottom: 5%;
+    width: 90%;
+    background-color: none;
+    font-size: 1vw;
+}
+
+.container {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    margin-left: 15vw;
+    pointer-events: none;
+    position: absolute;
+    transition: 1s;
+}
+
+.div-container {
+    width: 460px;
+    height: 790px;
+    display: flex;
+    justify-content: center; /* horizontally center */
+    align-items: center;
+    margin: 0px; 
+    border-radius: 20px;
+    position: relative;
+    border: .75px dotted var(--color);
+}
+
+
+.cover {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    border-radius: 50%;
+    z-index: 0;
+    margin-top: -150px;
+    opacity: 0;
+}
+
+.box {
+    width: 360px;
+    height: 360px;
+    box-sizing: border-box;
+    position:absolute;
+    align-items: center;
+}
+
+.border{
+    justify-content: center;
+    margin: 0 auto;
+    align-content: center;
+    margin-top: -72px;
+}
+
+.containerborder{
+    width: 360px;
+    height: 360px;
+    position: absolute;
+    justify-content: center;
+    text-align: center;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+.chamberlain{
+    /* color: white; */
+    text-align: center!important;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    position: absolute;
+    top: -232px;
+}
+
+/* #title {
+    width: 92%;
+} */
+
+#love{
+    width: 55%;
+    position: absolute;
+    top: 500px;
+}
+
+.info{
+    display: inline-flex;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    position: absolute;
+    top: -17px;
+    justify-content: center;
+    text-transform: lowercase;
+}
+
+.nametext, .roasttext, .beanstext{
+    border-radius: 100%;
+    padding: 5% 2% 5% 2%; 
+}
+
+
+.name{
+    margin-top: 33px;
+    margin-bottom: 10px;
+    /* text-align: left; */
+    width: 50%;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    position: absolute;
+    left: 33px;
+    box-sizing: border-box;
+    align-items: center;
+    align-content: center;
+    vertical-align: center;
+    transform: rotate(13deg);
+}
+
+#name{
+    height: 30px;
+}
+
+.roasttext{
+    /* transform: rotate(-5deg); */
+    position: relative;
+    margin: 2px;
+}
+
+.beanstext{
+    /* transform: rotate(4deg); */
+    position: relative;
+    margin: 2px;
+}
+
+.nametext{
+    font-size: 18px;
+    top: 80px;
+    position: absolute;
+    display: flex;
+    box-sizing: border-box;
+    padding: 13% 8% 10% 8%; 
+    max-width: 110%;;
+    /* color: #5c4033!important; */
+    /* border: 1px solid #5c4033!important */
+}
+
+.data{
+    font-weight: normal;
+    position: absolute;
+    width: 100%;
+    display: inline-flex;
+    font-size: 12px;
+    margin-top: 27px;
+    line-height: 1.1;
+    text-transform: capitalize;
+    text-decoration: wavy;
+    left:0;
+    top: 500px;
+}
+
+.net{
+    text-align: right;
+    position: absolute;
+    right: -25px;
+}
+
+.ara{
+    position: absolute;
+    left: -25px; 
+}
+
+.notes{
+    width: 29%;
+    margin-left: auto;
+    position: absolute;
+    justify-content: right;
+    /* hyphens: auto; */
+    right: 10px;
+    text-align: center;
+    top:415px;
+    font-size: 12px;
+    padding: 1.5%;
+    padding-top: 2%;
+    border-radius: 10px;
+    transform: rotate(-2deg);
+}
+
+.star{
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.zero{
+    height: 19.3%;
+    width: 100%; 
+    padding-top: 11px;
+}
+
+.one{
+    width: 100%; 
+    padding-top: 11px;
+    height: 19.3%;  
+}
+
+.two{
+    width: 101%; 
+    padding-top: 11px;
+    margin-left: -2px;
+    height: 19.1%;  
+}
+
+.three{
+    width: 103.6%; 
+    margin-left: -6px;
+    height: 19.75%;
+    padding-top: 9px;
+}
+
+.four{
+    width: 104.6%; 
+    margin-left: -8px;
+    height: 20.2%;
+    padding-top: 7.5px;
+}
+
+.five{
+    width: 106.37%; 
+    margin-left: -11px;
+    height: 20.15%;
+    padding-top: 7.25px;
+}
+
+.starsmall0{
+    height: 25%;
+}
+
+.starsmall1{
+    height: 32%;
+}
+
+.starsmall2{
+    height: 33%;
+}
+
+.starsmall3{
+    height: 33%;
+}
+
+.starsmall4{
+height: 36%;
+}
+
+.starsmall5{
+    height: 39%;
+    }
+
+.grid-container {
+    width: 360px;
+    height: 360px;
+    justify-content: center;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+
+.item-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0px;
+    width: 270px;
+    height: 270px;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.grid-item {
+    justify-content: center;
+    border-radius: 50%;
+    background: #FF003B;
+    align-items: center;
+}
+
+.honey{
+    width: 43px;
+    height: auto;
+    position: absolute;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.spice{
+    width:73px;
+    height: auto;
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 3px;
+}
+
+.nut{
+    width: 65px;
+    height: auto;
+    position: absolute;
+    margin-left: 15px;
+    margin-top: -30px;
+}
+
+.fruit{
+    width: 65px;
+    height: auto;
+    position: absolute;
+    margin-left: 12px;
+    margin-top: 8px; 
+}
+
+.choc{
+    width: 75px;
+    height: auto;
+    position: absolute;
+    margin-left: 12px;
+    margin-top: -4px; 
+}
+
+.emma{
+    width: 110px;
+    height: auto;
+    position: absolute;
+    margin-left: -16px;
+    margin-top: -40px;   
+}
+
+.caramel{
+    width: 95px;
+    height: auto;
+    position: absolute;
+    margin-left: 5px;
+    margin-top: -37px; 
+    transform: rotate(3.5deg);
+    z-index: 100;
+}
+
+.vanilla{
+    width: 100px;
+    height: auto;
+    position: absolute;
+    margin-left: -5px;
+    margin-top: 0px; 
+}
+
+
+.grid-container svg path{
+    stroke-width: 2px;
+}
+
+.close{
+    stroke-width: 1.5px!important;
+}
+
+.grid-item{
+    transition: .25s;
+}
+
+.response{
+    display: none;
+}
+
+@media only screen and (max-width: 700px){
+    #box{
+        display: none; 
+    }
+    .response {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center the items horizontally */
+        position: relative;
+        margin: 0 auto;
+        font-size: 8vw;
+        padding: 20vw;
+        padding-top: 75%;
+        color: var(--background);
+        text-align: center;
+        justify-content: center; /* Center the items vertically */
+    }
+    
+    #pls {
+        display: block;
+        width: 100%;
+    }
+    
+    #img {
+        display: block;
+        width: 100%;
+        text-align: center; /* Center the image horizontally */
+    }
+    
+    #img img {
+        width: 50%; /* Adjust the width as needed */
+        max-width: 100%;
+        height: auto; /* Maintain the aspect ratio */
+    }
+    
+}
