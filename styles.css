@@ -254,6 +254,7 @@ input{
     border-radius: 20px;
     position: relative;
     border: .75px dotted var(--color);
+    transform: scale(1.1)
 }
 
 
@@ -646,9 +647,9 @@ height: 36%;
         margin-left: 1vw;
     }
 
-    .container{
-        margin-left:15vw;
-        transform: scale(.9);
+    .div-container{
+        margin-left:1vw;
+        transform: scale(1);
 
     }
 
