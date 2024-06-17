@@ -146,6 +146,7 @@ input[type="range"]::-webkit-slider-runnable-track {
     font-family: "Tropiline", serif;
     color: var(--background);
     cursor: pointer;
+    margin-top: -.7vh;
 }
 
 #save:hover{
@@ -643,7 +644,7 @@ height: 36%;
     
     #options{
         line-height: .9;
-        /* padding: 1.5%; */
+        padding: 1.5%;
         margin-left: 1vw;
     }
 
