@@ -638,7 +638,7 @@ height: 36%;
 
 @media only screen and (max-height: 800px){
     #box{
-        transform: scale(.96);
+        transform: scale(.97);
     }
     
     #options{
@@ -649,7 +649,7 @@ height: 36%;
 
     .div-container{
         margin-left:1vw;
-        transform: scale(.9);
+        transform: scale(.92);
 
     }
 
