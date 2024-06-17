@@ -254,6 +254,7 @@ input{
     border-radius: 20px;
     position: relative;
     border: .75px dotted var(--color);
+    transform: scale(1.1)
 }
 
 
@@ -642,7 +643,7 @@ height: 36%;
     
     #options{
         line-height: .9;
-        padding: 1.5%;
+        /* padding: 1.5%; */
         margin-left: 1vw;
     }
 
