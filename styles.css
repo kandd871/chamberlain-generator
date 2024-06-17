@@ -254,7 +254,7 @@ input{
     border-radius: 20px;
     position: relative;
     border: .75px dotted var(--color);
-    transform: scale(1.1)
+    /* transform: scale(1.1) */
 }
 
 
