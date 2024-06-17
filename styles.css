@@ -637,7 +637,7 @@ height: 36%;
 
 @media only screen and (max-height: 850px){
     #box{
-        transform: scale(.9);
+        transform: scale(.96);
     }
     
     #options{
@@ -647,7 +647,9 @@ height: 36%;
     }
 
     .container{
-        margin-left:13vw;
+        margin-left:15vw;
+        transform: scale(.9);
+
     }
 
     #save{
